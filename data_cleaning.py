@@ -9,10 +9,10 @@ df = pd.read_csv("IMDB Dataset.csv", encoding='ISO-8859-1', usecols=['review', '
 
 def clean_text(text):
     text = str(text).lower()
-    text = re.sub(r'<.*?>', ' ', text)                   # 去除 HTML 标签
-    text = re.sub(r'[^\w\s]', '', text)                  # 去除标点符号
-    text = re.sub(r'\d+', '', text)                      # 去除数字
-    stop_words = set(stopwords.words('english'))         # 英文停用词
+    text = re.sub(r'<.*?>', ' ', text)
+    text = re.sub(r'[^\w\s]', '', text)
+    text = re.sub(r'\d+', '', text)
+    stop_words = set(stopwords.words('english'))
     words = text.split()
     words = [w for w in words if w not in stop_words]
     return ' '.join(words)
