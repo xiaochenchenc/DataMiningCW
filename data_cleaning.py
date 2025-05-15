@@ -3,7 +3,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 df = pd.read_csv("IMDB Dataset.csv", encoding='ISO-8859-1', usecols=['review', 'sentiment'])
 
